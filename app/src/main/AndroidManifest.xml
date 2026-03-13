@@ -12,7 +12,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.UTS">
         <activity
+            android:name=".SecondActivity"
+            android:exported="false" />
+        <!-- Halaman 2 -->
+        <activity
             android:name=".MainActivity"
+            android:exported="false" /> <!-- Halaman 1 (Launcher) -->
+        <activity
+            android:name=".LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

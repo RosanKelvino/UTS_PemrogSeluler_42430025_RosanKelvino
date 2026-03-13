@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvSapaan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="24dp" />
+
+        <EditText
+            android:id="@+id/etJumlahMahasiswa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Jumlah Mahasiswa"
+            android:inputType="number"
+            android:layout_marginBottom="16dp" />
+
+        <EditText
+            android:id="@+id/etRataNilai"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Rata-rata Nilai Kelas"
+            android:inputType="numberDecimal"
+            android:layout_marginBottom="24dp" />
+
+        <Button
+            android:id="@+id/btnProses"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="PROSES DATA" />
+
+        <TextView
+            android:id="@+id/tvStatusKelas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:textSize="18sp"
+            android:textColor="#000000"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/layoutDaftarAbsen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="16dp" />
+
+    </LinearLayout>
+</ScrollView>
