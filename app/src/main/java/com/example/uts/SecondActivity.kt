@@ -1,4 +1,4 @@
-package com.example.uts // Pastikan nama package sesuai dengan project Anda
+package com.example.uts 
 
 import android.os.Bundle
 import android.widget.Button
@@ -19,22 +19,18 @@ class SecondActivity : AppCompatActivity() {
         val btnProses = findViewById<Button>(R.id.btnProses)
         val tvStatusKelas = findViewById<TextView>(R.id.tvStatusKelas)
         val layoutDaftarAbsen = findViewById<LinearLayout>(R.id.layoutDaftarAbsen)
-        // Menangkap data Nama Dosen dari Intent halaman sebelumnya
         val namaDosen = intent.getStringExtra("NAMA_DOSEN") ?: "Tanpa Nama"
 
-        // Menampilkan teks sapaan
         tvSapaan.text = "Selamat bertugas, Dosen $namaDosen"
 
         btnProses.setOnClickListener {
             val jumlahStr = etJumlahMahasiswa.text.toString()
             val rataStr = etRataNilai.text.toString()
 
-            // Memastikan kolom input tidak kosong
             if (jumlahStr.isNotEmpty() && rataStr.isNotEmpty()) {
                 val jumlah = jumlahStr.toInt()
                 val rata = rataStr.toDouble()
 
-                // Logika 1: Tentukan Status Kelas (If-Else)
                 val status = if (rata >= 80) {
                     "Sangat Baik"
                 } else if (rata >= 60) {
@@ -44,7 +40,6 @@ class SecondActivity : AppCompatActivity() {
                 }
                 tvStatusKelas.text = "Status Kelas: $status"
 
-                // Logika 2: Cetak Daftar Absen (Perulangan For)
                 val layoutDaftarAbsen = findViewById<LinearLayout>(R.id.layoutDaftarAbsen)
                 layoutDaftarAbsen.removeAllViews()
 
